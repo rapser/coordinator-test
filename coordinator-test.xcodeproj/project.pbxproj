@@ -13,10 +13,15 @@
 		46517C9A247C73D200395E67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46517C98247C73D200395E67 /* Main.storyboard */; };
 		46517C9C247C73D500395E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46517C9B247C73D500395E67 /* Assets.xcassets */; };
 		46517C9F247C73D500395E67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46517C9D247C73D500395E67 /* LaunchScreen.storyboard */; };
+		46517CA7247C73EC00395E67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46517CA6247C73EC00395E67 /* Coordinator.swift */; };
+		46517CA9247C750900395E67 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46517CA8247C750900395E67 /* Storyboarded.swift */; };
+		46517CAB247C76B200395E67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46517CAA247C76B200395E67 /* MainCoordinator.swift */; };
+		46517CAD247C7D5D00395E67 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46517CAC247C7D5D00395E67 /* BuyViewController.swift */; };
+		46517CAF247C7D6A00395E67 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46517CAE247C7D6A00395E67 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		46517C8F247C73D200395E67 /* cordinator-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cordinator-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46517C8F247C73D200395E67 /* coordinator-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coordinator-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46517C92247C73D200395E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46517C94247C73D200395E67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		46517C96247C73D200395E67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		46517C9B247C73D500395E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46517C9E247C73D500395E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46517CA0247C73D500395E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46517CA6247C73EC00395E67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		46517CA8247C750900395E67 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		46517CAA247C76B200395E67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		46517CAC247C7D5D00395E67 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		46517CAE247C7D6A00395E67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +58,7 @@
 		46517C90247C73D200395E67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46517C8F247C73D200395E67 /* cordinator-test.app */,
+				46517C8F247C73D200395E67 /* coordinator-test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,23 +66,68 @@
 		46517C91247C73D200395E67 /* cordinator-test */ = {
 			isa = PBXGroup;
 			children = (
-				46517C92247C73D200395E67 /* AppDelegate.swift */,
-				46517C94247C73D200395E67 /* SceneDelegate.swift */,
-				46517C96247C73D200395E67 /* ViewController.swift */,
-				46517C98247C73D200395E67 /* Main.storyboard */,
-				46517C9B247C73D500395E67 /* Assets.xcassets */,
-				46517C9D247C73D500395E67 /* LaunchScreen.storyboard */,
-				46517CA0247C73D500395E67 /* Info.plist */,
+				46517CB0247CC2C000395E67 /* App */,
+				46517CB4247CC33100395E67 /* View */,
+				46517CB3247CC2FA00395E67 /* Resources */,
+				46517CB1247CC2CF00395E67 /* Navigation */,
+				46517CB2247CC2E400395E67 /* Controller */,
 			);
 			path = "cordinator-test";
+			sourceTree = "<group>";
+		};
+		46517CB0247CC2C000395E67 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				46517C92247C73D200395E67 /* AppDelegate.swift */,
+				46517C94247C73D200395E67 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		46517CB1247CC2CF00395E67 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				46517CAA247C76B200395E67 /* MainCoordinator.swift */,
+				46517CA6247C73EC00395E67 /* Coordinator.swift */,
+				46517CA8247C750900395E67 /* Storyboarded.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		46517CB2247CC2E400395E67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46517C96247C73D200395E67 /* ViewController.swift */,
+				46517CAC247C7D5D00395E67 /* BuyViewController.swift */,
+				46517CAE247C7D6A00395E67 /* CreateAccountViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46517CB3247CC2FA00395E67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46517C9D247C73D500395E67 /* LaunchScreen.storyboard */,
+				46517CA0247C73D500395E67 /* Info.plist */,
+				46517C9B247C73D500395E67 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		46517CB4247CC33100395E67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46517C98247C73D200395E67 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		46517C8E247C73D200395E67 /* cordinator-test */ = {
+		46517C8E247C73D200395E67 /* coordinator-test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46517CA3247C73D500395E67 /* Build configuration list for PBXNativeTarget "cordinator-test" */;
+			buildConfigurationList = 46517CA3247C73D500395E67 /* Build configuration list for PBXNativeTarget "coordinator-test" */;
 			buildPhases = (
 				46517C8B247C73D200395E67 /* Sources */,
 				46517C8C247C73D200395E67 /* Frameworks */,
@@ -82,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = "cordinator-test";
+			name = "coordinator-test";
 			productName = "cordinator-test";
-			productReference = 46517C8F247C73D200395E67 /* cordinator-test.app */;
+			productReference = 46517C8F247C73D200395E67 /* coordinator-test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 46517C8A247C73D200395E67 /* Build configuration list for PBXProject "cordinator-test" */;
+			buildConfigurationList = 46517C8A247C73D200395E67 /* Build configuration list for PBXProject "coordinator-test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46517C8E247C73D200395E67 /* cordinator-test */,
+				46517C8E247C73D200395E67 /* coordinator-test */,
 			);
 		};
 /* End PBXProject section */
@@ -138,8 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46517CA7247C73EC00395E67 /* Coordinator.swift in Sources */,
+				46517CAB247C76B200395E67 /* MainCoordinator.swift in Sources */,
 				46517C97247C73D200395E67 /* ViewController.swift in Sources */,
+				46517CA9247C750900395E67 /* Storyboarded.swift in Sources */,
+				46517CAF247C7D6A00395E67 /* CreateAccountViewController.swift in Sources */,
 				46517C93247C73D200395E67 /* AppDelegate.swift in Sources */,
+				46517CAD247C7D5D00395E67 /* BuyViewController.swift in Sources */,
 				46517C95247C73D200395E67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +346,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCYRT7JM;
-				INFOPLIST_FILE = "cordinator-test/Info.plist";
+				INFOPLIST_FILE = "cordinator-test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +365,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCYRT7JM;
-				INFOPLIST_FILE = "cordinator-test/Info.plist";
+				INFOPLIST_FILE = "cordinator-test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46517C8A247C73D200395E67 /* Build configuration list for PBXProject "cordinator-test" */ = {
+		46517C8A247C73D200395E67 /* Build configuration list for PBXProject "coordinator-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46517CA1247C73D500395E67 /* Debug */,
@@ -328,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46517CA3247C73D500395E67 /* Build configuration list for PBXNativeTarget "cordinator-test" */ = {
+		46517CA3247C73D500395E67 /* Build configuration list for PBXNativeTarget "coordinator-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46517CA4247C73D500395E67 /* Debug */,
